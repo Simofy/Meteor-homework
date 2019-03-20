@@ -1,0 +1,94 @@
+<head>
+  <title>homework</title>
+</head>
+
+<body>
+  {{>background}}
+  {{#if currentUser}}
+  {{> App}}
+  {{else}}
+  {{> Login}}
+  {{/if}}
+</body>
+
+<template name="Login">
+  <div class="container-login100">
+
+    <div class="login-screen">
+      <div class="login100-form">
+
+        {{> atForm}}
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="canvas">
+  <canvas id='background'></canvas>
+</template>
+
+<template name="App">
+  <div style="width: 100%; height: 100%;position: relative;z-index: 100; text-align: center;">
+    <ul>
+      <li><a href="#">LOGO</a></li>
+      <li style="float:right">{{> atNavButton }}</li>
+    </ul>
+    <div style="max-width: 975px; height: 100%; background:white; margin: auto; ">
+      {{> accordion }}
+
+    </div>
+  </div>
+</template>
+
+<template name="accordion">
+
+  <div class="accordion">
+    <span id="tab1"></span>
+    <span id="tab2"></span>
+    <span id="tab3"></span>
+
+    <div class="tabs">
+      <dl class="tab1">
+        <dd>
+          <a href="#tab1"><span>Clients</span></a>
+          <section>
+ 
+          </section>
+        </dd>
+      </dl>
+      <dl class="tab2">
+        <dd>
+          <a href="#tab2"><span>Storage</span></a>
+          <section>
+          <div>
+            <div id="Storage-table"></div>
+          </div>
+
+<form class="form-inline">
+  <label for="form_name">Name:</label>
+  <input type="text" id="form_name" name="name" required>
+  <label for="form_type">Type:</label>
+  <input type="text" id="form_type" name="type" required>
+  <label for="form_price">Price:</label>
+  <input type="number" id="form_price" name="price" required>
+
+  <button type="submit">Add...</button>
+</form>
+          </section>
+        </dd>
+      </dl>
+      <dl class="tab3">
+        <dd>
+          <a href="#tab3"><span>History</span></a>
+          <section style="background:#ddd">
+          </section>
+        </dd>
+      </dl>
+    </div>
+  </div>
+
+</template>
+
+<template name="background">
+  {{>canvas}}
+</template>
