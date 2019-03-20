@@ -2,8 +2,7 @@
 Customer Relations Management (CRM) system.
 
 
-
-
+<img src="https://i.imgur.com/Fdfs5Wn.png" alt="Screenshot" />
 
 ## Running Locally
 
